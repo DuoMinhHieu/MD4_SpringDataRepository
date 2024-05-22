@@ -64,7 +64,7 @@ public class ProvinceController {
         return "redirect:/provinces";
     }
 
-    @GetMapping("/view-province/{id}")
+    @GetMapping("/province/{id}")
     public ModelAndView viewProvince(@PathVariable("id") Long id){
         Optional<Province> provinceOptional = provinceService.findById(id);
         if(!provinceOptional.isPresent()){
